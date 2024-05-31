@@ -1,0 +1,29 @@
+{{ if eq .chezmoi.os "windows" -}}
+
+{{ else if eq .chezmoi.os "android" -}}
+
+#!/bin/sh
+echo "Setting up Termux..."
+rm "$HOME/../usr/etc/motd"
+cat << EOF >> "$HOME/.termux/termux.properties" 
+extra-keys =    [['~','/','-','_','UP','|','SHIFT'], \\
+                ['TAB','CTRL','$','LEFT','DOWN','RIGHT','ENTER']]
+allow-external-apps = true
+terminal-cursor-style = bar
+soft-keyboard-toggle-behaviour = enable/disable
+EOF
+pkg install fish starship -y
+chsh -s fish
+fish -c "set -U fish_greeting && set -g fish_greeting"
+
+{{ else if eq .chezmoi.osRelease "linux" -}}
+
+{{ if eq .chezmoi.osRelease.id "debian" -}}
+#!/bin/sh
+echo "Setting up Debian..."
+sudo apt install nala fish
+chsh -s $(which fish)
+curl -sS https://starship.rs/install.sh | sh
+{{ end -}}
+
+{{ end -}}
