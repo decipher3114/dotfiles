@@ -1,6 +1,4 @@
-{{ if eq .chezmoi.os "windows" -}}
-
-{{ else if eq .chezmoi.os "android" -}}
+{{ if eq .chezmoi.os "android" -}}
 
 #!/bin/sh
 echo "Setting up Termux..."
@@ -16,7 +14,7 @@ pkg install fish starship -y
 chsh -s fish
 fish -c "set -U fish_greeting && set -g fish_greeting"
 
-{{ else if eq .chezmoi.osRelease "linux" -}}
+{{ else if eq .chezmoi.os "linux" -}}
 
 {{ if eq .chezmoi.osRelease.id "debian" -}}
 #!/bin/sh

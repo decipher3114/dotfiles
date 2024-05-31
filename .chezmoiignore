@@ -1,4 +1,7 @@
 README.md
 {{ if eq .chezmoi.os "windows" }}
 **/fish
+{{ else if ne .chezmoi.os "windows" }}
+Documents
+AppData
 {{- end }}
