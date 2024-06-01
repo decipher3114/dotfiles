@@ -1,7 +1,15 @@
 README.md
 {{ if eq .chezmoi.os "windows" }}
+
 **/fish
+
 {{ else if ne .chezmoi.os "windows" }}
+
 Documents
 AppData
+
+{{ else if ne .chezmoi.os "android" }}
+
+private_dot_termux
+
 {{- end }}

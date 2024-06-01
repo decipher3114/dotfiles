@@ -1,94 +1,15 @@
 "$schema" = "https://starship.rs/config-schema.json"
-format = """
-$username\
-$hostname\
-$localip\
-$shlvl\
-$singularity\
-$kubernetes\
-$directory\
-$vcsh\
-$fossil_branch\
-$git_branch\
-$git_commit\
-$git_state\
-$git_metrics\
-$git_status\
-$hg_branch\
-$pijul_channel\
-$docker_context\
-$package\
-$c\
-$cmake\
-$cobol\
-$daml\
-$dart\
-$deno\
-$dotnet\
-$elixir\
-$elm\
-$erlang\
-$fennel\
-$golang\
-$guix_shell\
-$haskell\
-$haxe\
-$helm\
-$java\
-$julia\
-$kotlin\
-$gradle\
-$lua\
-$nim\
-$nodejs\
-$ocaml\
-$opa\
-$perl\
-$php\
-$pulumi\
-$purescript\
-$python\
-$raku\
-$rlang\
-$red\
-$ruby\
-$rust\
-$scala\
-$swift\
-$terraform\
-$vlang\
-$vagrant\
-$zig\
-$buf\
-$nix_shell\
-$conda\
-$meson\
-$spack\
-$memory_usage\
-$aws\
-$gcloud\
-$openstack\
-$azure\
-$env_var\
-$crystal\
-$custom\
-$sudo\
-$fill \
-$cmd_duration\
-$time\
-$line_break\
-$jobs\
-$battery\
-$status\
-$os\
-$container\
-$shell\
-$character"""
+format = "$username$hostname$localip$shlvl$singularity$kubernetes$directory$vcsh$fossil_branch$git_branch$git_commit$git_state$git_metrics$git_status$hg_branch$pijul_channel$docker_context$package$c$cmake$cobol$daml$dart$deno$dotnet$elixir$elm$erlang$fennel$golang$guix_shell$haskell$haxe$helm$java$julia$kotlin$gradle$lua$nim$nodejs$ocaml$opa$perl$php$pulumi$purescript$python$raku$rlang$red$ruby$rust$scala$swift$terraform$vlang$vagrant$zig$buf$nix_shell$conda$meson$spack$memory_usage$aws$gcloud$openstack$azure$env_var$crystal$custom$sudo$fill $cmd_duration$time$line_break$jobs$battery$status$os$container$shell$character"
 right_format = ""
 continuation_prompt = "[∙](bright-white) "
 scan_timeout = 30
 command_timeout = 500
 add_newline = true
+follow_symlinks = true
+
+[palettes]
+
+[profiles]
 
 [aws]
 format = '[on](italic dimmed) [$symbol($profile )(\($region\) )(\[$duration\] )]($style)'
@@ -107,6 +28,21 @@ format = "[on](italic dimmed) [$symbol($subscription)]($style) "
 symbol = "ﴃ "
 style = "blue bold"
 disabled = true
+
+[azure.subscription_aliases]
+
+[battery]
+full_symbol = "🔋 "
+charging_symbol = "🔌 "
+discharging_symbol = "⚡ "
+unknown_symbol = "❔ "
+empty_symbol = "😵 "
+disabled = false
+format = "[$symbol$percentage]($style) "
+
+[[battery.display]]
+threshold = 10
+style = "red bold"
 
 [buf]
 format = "with [$symbol($version )]($style)"
@@ -275,8 +211,8 @@ detect_files = [
 detect_folders = []
 
 [directory]
-truncation_length = 20
-truncate_to_repo = false
+truncation_length = 10
+truncate_to_repo = true
 fish_style_pwd_dir_length = 0
 use_logical_path = true
 format = "[$path]($style)[$read_only]($read_only_style) "
@@ -290,6 +226,20 @@ home_symbol = "~"
 use_os_path_sep = true
 
 [directory.substitutions]
+
+[direnv]
+format = "[$symbol$loaded/$allowed]($style) "
+symbol = "direnv "
+style = "bold orange"
+disabled = true
+detect_extensions = []
+detect_files = [".envrc"]
+detect_folders = []
+allowed_msg = "allowed"
+not_allowed_msg = "not allowed"
+denied_msg = "denied"
+loaded_msg = "loaded"
+unloaded_msg = "not loaded"
 
 [docker_context]
 symbol = "🐳 "
@@ -388,11 +338,19 @@ truncation_length = 9223372036854775807
 truncation_symbol = "…"
 disabled = true
 
+[fossil_metrics]
+format = "([+$added]($added_style) )([-$deleted]($deleted_style) )"
+added_style = "bold green"
+deleted_style = "bold red"
+only_nonzero_diffs = true
+disabled = true
+
 [gcloud]
 format = '[on](italic dimmed) [$symbol$account(@$domain)(\($region\))]($style) '
 symbol = "☁️  "
 style = "bold blue"
 disabled = false
+detect_env_vars = []
 
 [gcloud.region_aliases]
 
@@ -425,6 +383,7 @@ deleted_style = "bold red"
 only_nonzero_diffs = true
 format = "([+$added]($added_style) )([-$deleted]($deleted_style) )"
 disabled = true
+ignore_submodules = false
 
 [git_state]
 rebase = "REBASING"
@@ -452,8 +411,19 @@ renamed = "»"
 modified = "!"
 staged = "+"
 untracked = "?"
+typechanged = ""
 ignore_submodules = false
 disabled = false
+
+[gleam]
+format = "via [$symbol($version )]($style)"
+version_format = "v${raw}"
+symbol = "⭐ "
+style = "bold #FFAFF3"
+disabled = false
+detect_extensions = ["gleam"]
+detect_files = ["gleam.toml"]
+detect_folders = []
 
 [golang]
 format = "[via](italic dimmed) [$symbol($version )]($style)"
@@ -461,6 +431,7 @@ version_format = "v${raw}"
 symbol = "🐹 "
 style = "bold cyan"
 disabled = false
+not_capable_style = "bold red"
 detect_extensions = ["go"]
 detect_files = [
     "go.mod",
@@ -555,6 +526,7 @@ disabled = true
 ssh_only = true
 ssh_symbol = "🌐 "
 trim_at = "."
+detect_env_vars = []
 format = "[$ssh_symbol$hostname]($style) in "
 style = "green dimmed bold"
 disabled = false
@@ -629,6 +601,8 @@ disabled = true
 detect_extensions = []
 detect_files = []
 detect_folders = []
+detect_env_vars = []
+contexts = []
 
 [kubernetes.context_aliases]
 
@@ -668,6 +642,12 @@ format = "[via](italic dimmed) [$symbol$project]($style) "
 symbol = "⬢ "
 style = "blue bold"
 disabled = false
+
+[nats]
+format = "[$symbol($name )]($style)"
+symbol = "✉️ "
+style = "bold purple"
+disabled = true
 
 [nim]
 format = "[via](italic dimmed) [$symbol($version )]($style)"
@@ -741,6 +721,16 @@ detect_folders = [
     "_opam",
     "esy.lock",
 ]
+
+[odin]
+format = "via [$symbol($version )]($style)"
+show_commit = false
+symbol = "Ø "
+style = "bold bright-blue"
+disabled = false
+detect_extensions = ["odin"]
+detect_files = []
+detect_folders = []
 
 [opa]
 format = "[via](italic dimmed) [$symbol($version )]($style)"
@@ -900,6 +890,16 @@ detect_files = [
 ]
 detect_folders = []
 
+[quarto]
+format = "via [$symbol($version )]($style)"
+version_format = "v${raw}"
+symbol = "⨁ "
+style = "bold #75AADB"
+disabled = false
+detect_extensions = ["qmd"]
+detect_files = ["_quarto.yml"]
+detect_folders = []
+
 [raku]
 format = "[via](italic dimmed) [$symbol($version-$vm_version )]($style)"
 version_format = "${raw}"
@@ -1010,6 +1010,7 @@ threshold = 2
 format = "[$symbol$shlvl]($style) "
 symbol = "↕️  "
 repeat = false
+repeat_offset = 0
 style = "bold yellow"
 disabled = true
 
@@ -1018,6 +1019,17 @@ symbol = ""
 format = '[$symbol\[$env\]]($style) '
 style = "blue bold"
 disabled = false
+
+[solidity]
+format = "via [$symbol($version)]($style)"
+version_format = "v${major}.${minor}.${patch}"
+disabled = false
+style = "bold blue"
+symbol = "S "
+compiler = ["solc"]
+detect_extensions = ["sol"]
+detect_files = []
+detect_folders = []
 
 [spack]
 truncation_length = 1
@@ -1081,12 +1093,25 @@ disabled = true
 utc_time_offset = "local"
 time_range = "-"
 
+[typst]
+format = "via [$symbol($version )]($style)"
+version_format = "v${raw}"
+symbol = "t "
+style = "bold #0093A7"
+disabled = false
+detect_extensions = ["typ"]
+detect_files = ["template.typ"]
+detect_folders = []
+
 [username]
+detect_env_vars = []
 format = "[$user]($style) "
 style_root = "red bold"
 style_user = "yellow bold"
 show_always = true
 disabled = true
+
+[username.aliases]
 
 [vagrant]
 format = "[via](italic dimmed) [$symbol($version )]($style)"
@@ -1127,3 +1152,6 @@ disabled = false
 detect_extensions = ["zig"]
 detect_files = []
 detect_folders = []
+
+[custom]
+
