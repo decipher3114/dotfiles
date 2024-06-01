@@ -1,15 +1,18 @@
 README.md
-{{ if eq .chezmoi.os "windows" }}
 
+## Skip on Windows
+{{ if eq .chezmoi.os "windows" -}}
 **/fish
+{{- end}}
 
-{{ else if ne .chezmoi.os "windows" }}
 
-Documents
+## Windows specific
+{{ if ne .chezmoi.os "windows" -}}
 AppData
+Documents
+{{- end }}
 
-{{ else if ne .chezmoi.os "android" }}
-
-private_dot_termux
-
+## Termux Specific
+{{ if ne .chezmoi.os "android" -}}
+.termux
 {{- end }}
