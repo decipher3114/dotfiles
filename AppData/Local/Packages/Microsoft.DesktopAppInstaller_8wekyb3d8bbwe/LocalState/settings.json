@@ -7,7 +7,7 @@
         "preferences": {
             "scope": "user"
         },
-        "portablePackageUserRoot": "C:/Users/decipher/Packages"
+        "portablePackageUserRoot": "C:/Users/decipher/bin"
     },
     "uninstallBehavior": {
         "purgePortablePackage": true

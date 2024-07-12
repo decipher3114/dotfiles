@@ -1,0 +1,13 @@
+theme = "Krypton" 
+
+show = [
+    "Host",
+    "OperatingSystem",
+    "Distribution",
+    "DesktopEnvironment",
+    "Packages",
+    "Shell",
+    "Uptime",
+    "Processor",
+    "Memory"
+]

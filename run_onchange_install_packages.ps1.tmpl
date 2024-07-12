@@ -1,5 +1,13 @@
 {{ if eq .chezmoi.os "windows" }}
 
-winget install Google.Chrome Google.PlatformTools TechPowerUp.NVCleanstall LocalSend.LocalSend
+winget install Google.Chrome TechPowerUp.NVCleanstall LocalSend.LocalSend --no-upgrade
+
+scoop bucket add extras
+scoop bucket add sysinternals
+scoop bucket add nerd-fonts
+
+scoop install macchina
+scoop install adb
+scoop install autoruns
 
 {{ end }}

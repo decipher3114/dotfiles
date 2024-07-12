@@ -1,10 +1,9 @@
 {{ if eq .chezmoi.os "android" -}}
 
 #!/bin/sh
-echo "Setting up Termux..."
 rm "$HOME/../usr/etc/motd"
-pkg install git fish getconf -y
-chsh -s fish
+pkg install git fish getconf jq macchina -y
+chsh -s $(which fish)
 curl -sS https://starship.rs/install.sh | sh -s -- --bin-dir /data/data/com.termux/files/usr/bin
 
 {{ else if eq .chezmoi.os "linux" -}}
@@ -12,10 +11,10 @@ curl -sS https://starship.rs/install.sh | sh -s -- --bin-dir /data/data/com.term
 {{ if eq .chezmoi.osRelease.id "debian" -}}
 
 #!/bin/sh
-echo "Setting up Debian..."
-sudo apt install nala fish git
+sudo apt install curl nala fish git jq
 chsh -s $(which fish)
 curl -sS https://starship.rs/install.sh | sh
+curl -sL "https://github.com/Macchina-CLI/macchina/releases/latest/download/macchina-linux-x86_64" -o "$HOME/.local/bin/macchina" && chmod +x "$HOME/.local/bin/macchina"
 
 {{ end -}}
 
