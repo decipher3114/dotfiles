@@ -1,9 +1,13 @@
 README.md
 
+## Skip scripts
+setup_scripts
+
+
 ## Skip on Windows
 {{ if eq .chezmoi.os "windows" }}
 .config/fish
-{{ end}}
+{{ end }}
 
 
 ## Windows specific

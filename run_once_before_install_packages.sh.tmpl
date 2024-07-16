@@ -1,0 +1,16 @@
+{{ if ne .chezmoi.os "windows" -}}
+#!{{ lookPath "bash" }}
+
+{{ if eq .chezmoi.os "android" -}}
+
+script=android_setup.sh
+
+{{- else if eq .chezmoi.os "linux" -}}
+
+script=debian_setup.sh
+
+{{ end }}
+
+bash "$HOME/.local/share/chezmoi/setup_scripts/$script"
+
+{{ end -}}

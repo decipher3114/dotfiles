@@ -1,5 +1,5 @@
 # dotfiles
 
 ```
-chezmoi init https://github.com/decipher3114/dotfiles/ --apply
+chezmoi init decipher3114 --apply
 ```
