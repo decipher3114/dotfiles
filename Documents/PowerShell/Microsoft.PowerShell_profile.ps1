@@ -1,5 +1,3 @@
-macchina
-
 function Invoke-Starship-TransientFunction {
   &starship module character
 }

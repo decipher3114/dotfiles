@@ -7,9 +7,18 @@
         "preferences": {
             "scope": "user"
         },
-        "portablePackageUserRoot": "C:/Users/decipher/bin"
+        "portablePackageUserRoot": "C:/Users/decipher/Packages"
     },
     "uninstallBehavior": {
         "purgePortablePackage": true
+    },
+    "network": {
+        "downloader": "wininet"
+    },
+    "telemetry": {
+        "disable": true
+    },
+    "experimentalFeatures": {
+        "directMSI": true
     }
 }
