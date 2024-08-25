@@ -6,8 +6,7 @@
     "installBehavior": {
         "preferences": {
             "scope": "user"
-        },
-        "portablePackageUserRoot": "C:/Users/decipher/Packages"
+        }
     },
     "uninstallBehavior": {
         "purgePortablePackage": true
