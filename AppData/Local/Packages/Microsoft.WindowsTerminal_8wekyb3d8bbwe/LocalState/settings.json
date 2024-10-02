@@ -48,8 +48,8 @@
             "adjustIndistinguishableColors": "indexed",
             "colorScheme": 
             {
-                "dark": "Everforest Dark",
-                "light": "Everforest Light"
+                "dark": "Catppuccin Mocha",
+                "light": "Catppuccin Latte"
             },
             "font": 
             {
