@@ -1,15 +1,23 @@
 {{ if ne .chezmoi.os "windows" -}}
-#!{{ lookPath "bash" }}
+    #!{{ lookPath "bash" }}
 
-{{ if eq .chezmoi.os "android" -}}
+    {{ if eq .chezmoi.os "android" -}}
 
-script=android_setup.sh
+        script=android_setup.sh
 
-{{- else if eq .chezmoi.os "linux" -}}
+    {{- else if eq .chezmoi.os "linux" -}}
 
-script=debian_setup.sh
+        {{ if eq .chezmoi.osRelease.id "debian" -}}
 
-{{ end }}
+            script=debian_setup.sh
+
+        {{- else if eq .chezmoi.osRelease.id "arch" -}}
+
+            script=arch_setup.sh
+
+        {{ end }}
+
+    {{ end }}
 
 bash "$HOME/.local/share/chezmoi/setup_scripts/$script"
 
