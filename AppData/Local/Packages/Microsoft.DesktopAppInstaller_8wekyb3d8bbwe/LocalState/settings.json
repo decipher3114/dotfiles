@@ -5,7 +5,7 @@
 
     "installBehavior": {
         "preferences": {
-            "scope": "machine"
+            "scope": "user"
         }
     },
     "uninstallBehavior": {
