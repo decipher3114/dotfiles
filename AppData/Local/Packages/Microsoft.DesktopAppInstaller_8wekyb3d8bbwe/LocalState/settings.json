@@ -1,13 +1,6 @@
 {
     "$schema": "https://aka.ms/winget-settings.schema.json",
 
-    // For documentation on these settings, see: https://aka.ms/winget-settings
-
-    "installBehavior": {
-        "preferences": {
-            "scope": "user"
-        }
-    },
     "uninstallBehavior": {
         "purgePortablePackage": true
     },
@@ -18,6 +11,7 @@
         "disable": true
     },
     "experimentalFeatures": {
-        "directMSI": true
+        "directMSI": true,
+        "configureSelfElevate": true
     }
 }
