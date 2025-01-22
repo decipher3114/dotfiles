@@ -87,6 +87,13 @@ window_rules:
 
       - window_title: { equals: 'Recording toolbar' }
 
+      - window_process: { regex: 'MyZenV2' }
+
+      - window_process: { regex: 'AsusMyASUS' }
+
+      - window_title: { equals: 'Open File' }
+      - window_title: { equals: 'Open Folder' }
+
   - commands: ['toggle-floating --centered']
     match:
 
