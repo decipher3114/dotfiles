@@ -17,5 +17,5 @@ $storePkgs =
     "9P8LTPGCBZXD", # Wintoys
     "9N1X3Z50BLM8"  # Visum Photo Viewer
 
-winget install $wingetPkgs -s winget --accept-source-agreements --accept-package-agreements
-winget install $storePkgs -s msstore --accept-source-agreements --accept-package-agreements
+winget install $wingetPkgs -s winget --accept-source-agreements --accept-package-agreements --interactive
+winget install $storePkgs -s msstore --accept-source-agreements --accept-package-agreements --interactive
