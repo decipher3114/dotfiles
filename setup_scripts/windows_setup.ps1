@@ -3,11 +3,9 @@ $wingetPkgs =
     "Google.Chrome",
     "Microsoft.VisualStudioCode",
     "Git.Git",
-    "TechPowerUp.NVCleanstall",
     "Google.QuickShare",
     "M2Team.NanaZip.Preview",
     "Klocman.BulkCrapUninstaller",
-    "Microsoft.PowerToys",
     "Starship.Starship",
     "Microsoft.Sysinternals.Autoruns",
     "Google.PlatformTools"
