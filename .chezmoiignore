@@ -12,6 +12,7 @@ setup_scripts
 
 ## Windows specific
 {{ if ne .chezmoi.os "windows" }}
+dot_glzr
 AppData
 Documents
 {{ end }}

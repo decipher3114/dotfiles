@@ -7,6 +7,9 @@ $wingetPkgs =
     "M2Team.NanaZip.Preview",
     "Klocman.BulkCrapUninstaller",
     "Starship.Starship",
+    "glzr-io.glazewm",
+    "RamenSoftware.Windhawk",
+    "Flow-Launcher.Flow-Launcher",
     "Microsoft.Sysinternals.Autoruns",
     "Google.PlatformTools"
 
