@@ -88,6 +88,8 @@ window_rules:
 
       - window_process: { regex: 'AsusMyASUS' }
 
+      - window_process: { regex: 'ABDownloadManager' }
+
       - window_title: { equals: 'Open File' }
       - window_title: { equals: 'Open Folder' }
       - window_title: { equals: 'Open'}
