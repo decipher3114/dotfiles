@@ -3,7 +3,6 @@ $wingetPkgs =
     "Google.Chrome",
     "Microsoft.VisualStudioCode",
     "Git.Git",
-    "Google.QuickShare",
     "M2Team.NanaZip.Preview",
     "Klocman.BulkCrapUninstaller",
     "Starship.Starship",
@@ -11,12 +10,11 @@ $wingetPkgs =
     "RamenSoftware.Windhawk",
     "Flow-Launcher.Flow-Launcher",
     "Microsoft.Sysinternals.Autoruns",
-    "Google.PlatformTools"
-
+    "Google.PlatformTools",
+    "clsid2.mpc-hc"
 
 $storePkgs = 
     "9MZ1SNWT0N5D", # Powershell
-    "9NTSNMSVCB5L", # Screenbox
     "9P8LTPGCBZXD", # Wintoys
     "9N1X3Z50BLM8"  # Visum Photo Viewer
 
