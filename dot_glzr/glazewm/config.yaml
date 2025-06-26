@@ -1,217 +1,215 @@
 general:
-    startup_commands: []
+  startup_commands: []
 
-    focus_follows_cursor: false
+  focus_follows_cursor: false
 
-    toggle_workspace_on_refocus: false
+  toggle_workspace_on_refocus: false
 
-    cursor_jump:
-        enabled: true
+  cursor_jump:
+    enabled: true
 
-        trigger: "monitor_focus"
+    trigger: "monitor_focus"
 
-    hide_method: "cloak"
-    show_all_in_taskbar: false
+  hide_method: "cloak"
+  show_all_in_taskbar: false
 
 gaps:
-    scale_with_dpi: true
-    inner_gap: "10px"
-    outer_gap:
-        top: "10px"
-        right: "10px"
-        bottom: "10px"
-        left: "10px"
+  scale_with_dpi: true
+  inner_gap: "10px"
+  outer_gap:
+    top: "10px"
+    right: "10px"
+    bottom: "10px"
+    left: "10px"
 
 window_effects:
-    focused_window:
-        border:
-            enabled: false
-            color: "#a1a1a1"
+  focused_window:
+    border:
+      enabled: false
+      color: "#a1a1a1"
 
-        hide_title_bar:
-            enabled: false
+    hide_title_bar:
+      enabled: false
 
-        corner_style:
-            enabled: false
-            style: "rounded"
+    corner_style:
+      enabled: false
+      style: "rounded"
 
-    other_windows:
-        border:
-            enabled: false
-            color: "#a1a1a1"
-        hide_title_bar:
-            enabled: false
-        corner_style:
-            enabled: false
-            style: "rounded"
+  other_windows:
+    border:
+      enabled: false
+      color: "#a1a1a1"
+    hide_title_bar:
+      enabled: false
+    corner_style:
+      enabled: false
+      style: "rounded"
 
 window_behavior:
-    initial_state: "tiling"
+  initial_state: "tiling"
 
-    state_defaults:
-        floating:
-            centered: true
+  state_defaults:
+    floating:
+      centered: true
 
-            shown_on_top: true
+      shown_on_top: false
 
-        fullscreen:
-            maximized: false
+    fullscreen:
+      maximized: false
 
-            shown_on_top: true
+      shown_on_top: true
 
 workspaces:
-    - name: "1"
-    - name: "2"
-    - name: "3"
-    - name: "4"
-    - name: "5"
-    - name: "6"
-    - name: "7"
-    - name: "8"
-    - name: "9"
+  - name: "1"
+  - name: "2"
+  - name: "3"
+  - name: "4"
+  - name: "5"
+  - name: "6"
+  - name: "7"
+  - name: "8"
+  - name: "9"
 
 window_rules:
-    - commands: ["ignore"]
-      match:
-          - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
-            window_class: { regex: "Chrome_WidgetWin_1|MozillaDialogClass" }
+  - commands: ["ignore"]
+    match:
+      - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
+        window_class: { regex: "Chrome_WidgetWin_1|MozillaDialogClass" }
 
-          - window_process: { regex: "[Cc]apter" }
-          - window_process: { equals: "AlgoJinn"}
+      - window_process: { regex: "[Cc]apter" }
 
-          - window_title: { equals: "Recording toolbar" }
+      - window_title: { equals: "Recording toolbar" }
 
-          - window_process: { regex: "AsusMyASUS" }
+      - window_process: { regex: "AsusMyASUS" }
 
-    - commands: ["toggle-floating --centered"]
-      match:
-          - window_process: { equals: "BCUninstaller" }
-            window_title: { regex: "Properties*|Begin*|Leftover*|*progress" }
+      - window_process: { regex: "ABDownloadManager" }
+
+      - window_process: { equals: "BCUninstaller" }
 
 binding_modes:
-    - name: "resize"
-      keybindings:
-          - commands: ["resize --width -2%"]
-            bindings: ["h", "left"]
-          - commands: ["resize --width +2%"]
-            bindings: ["l", "right"]
-          - commands: ["resize --height +2%"]
-            bindings: ["k", "up"]
-          - commands: ["resize --height -2%"]
-            bindings: ["j", "down"]
+  - name: "resize"
+    keybindings:
+      - commands: ["resize --width -2%"]
+        bindings: ["h", "left"]
+      - commands: ["resize --width +2%"]
+        bindings: ["l", "right"]
+      - commands: ["resize --height +2%"]
+        bindings: ["k", "up"]
+      - commands: ["resize --height -2%"]
+        bindings: ["j", "down"]
 
-          - commands: ["wm-disable-binding-mode --name resize"]
-            bindings: ["escape", "enter"]
+      - commands: ["wm-disable-binding-mode --name resize"]
+        bindings: ["escape", "enter"]
 
-    - name: "pause"
-      keybindings:
-          - commands: ["wm-disable-binding-mode --name pause"]
-            bindings: ["alt+shift+p"]
+  - name: "pause"
+    keybindings:
+      - commands: ["wm-disable-binding-mode --name pause"]
+        bindings: ["alt+shift+p"]
 
 keybindings:
-    - commands: ["focus --direction left"]
-      bindings: ["alt+h", "alt+left"]
-    - commands: ["focus --direction right"]
-      bindings: ["alt+l", "alt+right"]
-    - commands: ["focus --direction up"]
-      bindings: ["alt+k", "alt+up"]
-    - commands: ["focus --direction down"]
-      bindings: ["alt+j", "alt+down"]
+  - commands: ["focus --direction left"]
+    bindings: ["alt+h", "alt+left"]
+  - commands: ["focus --direction right"]
+    bindings: ["alt+l", "alt+right"]
+  - commands: ["focus --direction up"]
+    bindings: ["alt+k", "alt+up"]
+  - commands: ["focus --direction down"]
+    bindings: ["alt+j", "alt+down"]
 
-    - commands: ["move --direction left"]
-      bindings: ["alt+shift+h", "alt+shift+left"]
-    - commands: ["move --direction right"]
-      bindings: ["alt+shift+l", "alt+shift+right"]
-    - commands: ["move --direction up"]
-      bindings: ["alt+shift+k", "alt+shift+up"]
-    - commands: ["move --direction down"]
-      bindings: ["alt+shift+j", "alt+shift+down"]
+  - commands: ["move --direction left"]
+    bindings: ["alt+shift+h", "alt+shift+left"]
+  - commands: ["move --direction right"]
+    bindings: ["alt+shift+l", "alt+shift+right"]
+  - commands: ["move --direction up"]
+    bindings: ["alt+shift+k", "alt+shift+up"]
+  - commands: ["move --direction down"]
+    bindings: ["alt+shift+j", "alt+shift+down"]
 
-    - commands: ["resize --width -2%"]
-      bindings: ["alt+u"]
-    - commands: ["resize --width +2%"]
-      bindings: ["alt+p"]
-    - commands: ["resize --height +2%"]
-      bindings: ["alt+o"]
-    - commands: ["resize --height -2%"]
-      bindings: ["alt+i"]
+  - commands: ["resize --width -2%"]
+    bindings: ["alt+u"]
+  - commands: ["resize --width +2%"]
+    bindings: ["alt+p"]
+  - commands: ["resize --height +2%"]
+    bindings: ["alt+o"]
+  - commands: ["resize --height -2%"]
+    bindings: ["alt+i"]
 
-    - commands: ["wm-enable-binding-mode --name resize"]
-      bindings: ["alt+r"]
+  - commands: ["wm-enable-binding-mode --name resize"]
+    bindings: ["alt+r"]
 
-    - commands: ["wm-enable-binding-mode --name pause"]
-      bindings: ["alt+shift+p"]
+  - commands: ["wm-enable-binding-mode --name pause"]
+    bindings: ["alt+shift+p"]
 
-    - commands: ["toggle-tiling"]
-      bindings: ["alt+t"]
+  - commands: ["toggle-tiling"]
+    bindings: ["alt+t"]
 
-    - commands: ["toggle-floating --centered"]
-      bindings: ["alt+f"]
+  - commands: ["toggle-floating --centered"]
+    bindings: ["alt+f"]
 
-    - commands: ["toggle-tiling-direction"]
-      bindings: ["alt+v"]
+  - commands: ["toggle-tiling-direction"]
+    bindings: ["alt+v"]
 
-    - commands: ["close"]
-      bindings: ["alt+q"]
+  - commands: ["close"]
+    bindings: ["alt+q"]
 
-    - commands: ["wm-reload-config"]
-      bindings: ["alt+shift+r"]
+  - commands: ["wm-reload-config"]
+    bindings: ["alt+shift+r"]
 
-    - commands: ["wm-redraw"]
-      bindings: ["alt+shift+w"]
+  - commands: ["wm-redraw"]
+    bindings: ["alt+shift+w"]
 
-    - commands: ["focus --next-workspace"]
-      bindings: ["alt+control+right"]
+  - commands: ["focus --next-workspace"]
+    bindings: ["alt+control+right"]
 
-    - commands: ["focus --prev-workspace"]
-      bindings: ["alt+control+left"]
+  - commands: ["focus --prev-workspace"]
+    bindings: ["alt+control+left"]
 
-    - commands: ["focus --recent-workspace"]
-      bindings: ["alt+d"]
+  - commands: ["focus --recent-workspace"]
+    bindings: ["alt+d"]
 
-    - commands: ["focus --workspace 1"]
-      bindings: ["alt+1", "alt+numpad1"]
-    - commands: ["focus --workspace 2"]
-      bindings: ["alt+2", "alt+numpad2"]
-    - commands: ["focus --workspace 3"]
-      bindings: ["alt+3", "alt+numpad3"]
-    - commands: ["focus --workspace 4"]
-      bindings: ["alt+4", "alt+numpad4"]
-    - commands: ["focus --workspace 5"]
-      bindings: ["alt+5", "alt+numpad5"]
-    - commands: ["focus --workspace 6"]
-      bindings: ["alt+6", "alt+numpad6"]
-    - commands: ["focus --workspace 7"]
-      bindings: ["alt+7", "alt+numpad7"]
-    - commands: ["focus --workspace 8"]
-      bindings: ["alt+8", "alt+numpad8"]
-    - commands: ["focus --workspace 9"]
-      bindings: ["alt+9", "alt+numpad9"]
+  - commands: ["focus --workspace 1"]
+    bindings: ["alt+1", "alt+numpad1"]
+  - commands: ["focus --workspace 2"]
+    bindings: ["alt+2", "alt+numpad2"]
+  - commands: ["focus --workspace 3"]
+    bindings: ["alt+3", "alt+numpad3"]
+  - commands: ["focus --workspace 4"]
+    bindings: ["alt+4", "alt+numpad4"]
+  - commands: ["focus --workspace 5"]
+    bindings: ["alt+5", "alt+numpad5"]
+  - commands: ["focus --workspace 6"]
+    bindings: ["alt+6", "alt+numpad6"]
+  - commands: ["focus --workspace 7"]
+    bindings: ["alt+7", "alt+numpad7"]
+  - commands: ["focus --workspace 8"]
+    bindings: ["alt+8", "alt+numpad8"]
+  - commands: ["focus --workspace 9"]
+    bindings: ["alt+9", "alt+numpad9"]
 
-    - commands: ["move-workspace --direction left"]
-      bindings: ["alt+ctrl+shift+left"]
-    - commands: ["move-workspace --direction right"]
-      bindings: ["alt+ctrl+shift+right"]
-    - commands: ["move-workspace --direction up"]
-      bindings: ["alt+ctrl+shift+up"]
-    - commands: ["move-workspace --direction down"]
-      bindings: ["alt+ctrl+shift+down"]
+  - commands: ["move-workspace --direction left"]
+    bindings: ["alt+ctrl+shift+left"]
+  - commands: ["move-workspace --direction right"]
+    bindings: ["alt+ctrl+shift+right"]
+  - commands: ["move-workspace --direction up"]
+    bindings: ["alt+ctrl+shift+up"]
+  - commands: ["move-workspace --direction down"]
+    bindings: ["alt+ctrl+shift+down"]
 
-    - commands: ["move --workspace 1", "focus --workspace 1"]
-      bindings: ["alt+shift+1"]
-    - commands: ["move --workspace 2", "focus --workspace 2"]
-      bindings: ["alt+shift+2"]
-    - commands: ["move --workspace 3", "focus --workspace 3"]
-      bindings: ["alt+shift+3"]
-    - commands: ["move --workspace 4", "focus --workspace 4"]
-      bindings: ["alt+shift+4"]
-    - commands: ["move --workspace 5", "focus --workspace 5"]
-      bindings: ["alt+shift+5"]
-    - commands: ["move --workspace 6", "focus --workspace 6"]
-      bindings: ["alt+shift+6"]
-    - commands: ["move --workspace 7", "focus --workspace 7"]
-      bindings: ["alt+shift+7"]
-    - commands: ["move --workspace 8", "focus --workspace 8"]
-      bindings: ["alt+shift+8"]
-    - commands: ["move --workspace 9", "focus --workspace 9"]
-      bindings: ["alt+shift+9"]
+  - commands: ["move --workspace 1", "focus --workspace 1"]
+    bindings: ["alt+shift+1"]
+  - commands: ["move --workspace 2", "focus --workspace 2"]
+    bindings: ["alt+shift+2"]
+  - commands: ["move --workspace 3", "focus --workspace 3"]
+    bindings: ["alt+shift+3"]
+  - commands: ["move --workspace 4", "focus --workspace 4"]
+    bindings: ["alt+shift+4"]
+  - commands: ["move --workspace 5", "focus --workspace 5"]
+    bindings: ["alt+shift+5"]
+  - commands: ["move --workspace 6", "focus --workspace 6"]
+    bindings: ["alt+shift+6"]
+  - commands: ["move --workspace 7", "focus --workspace 7"]
+    bindings: ["alt+shift+7"]
+  - commands: ["move --workspace 8", "focus --workspace 8"]
+    bindings: ["alt+shift+8"]
+  - commands: ["move --workspace 9", "focus --workspace 9"]
+    bindings: ["alt+shift+9"]
