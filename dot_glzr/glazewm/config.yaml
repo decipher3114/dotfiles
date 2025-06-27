@@ -81,6 +81,7 @@ window_rules:
       - window_title: { equals: "Recording toolbar" }
 
       - window_process: { regex: "AsusMyASUS" }
+      - window_process: { equals: "GHelper" }
 
       - window_process: { regex: "ABDownloadManager" }
 
