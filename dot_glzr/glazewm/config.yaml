@@ -73,19 +73,34 @@ workspaces:
 window_rules:
   - commands: ["ignore"]
     match:
+      # PIP windows
       - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
         window_class: { regex: "Chrome_WidgetWin_1|MozillaDialogClass" }
 
-      - window_process: { regex: "[Cc]apter" }
-
+      # Snipping tool
       - window_title: { equals: "Recording toolbar" }
 
-      - window_process: { regex: "AsusMyASUS" }
+      # File/Folder Picker
+      - window_class: { equals: "#32770" }
+
+      # GUIPropView
+      - window_process: { equals: "GUIPropView" }
+
+      # Capter
+      - window_process: { equals: "capter" }
+
+      # GHelper ASUS
       - window_process: { equals: "GHelper" }
 
-      - window_process: { regex: "ABDownloadManager" }
+      # All except the main window
+      - window_process: { equals: "ABDownloadManager" }
+        window_title: { not_equals: "AB Download Manager" }
 
+  - commands: ["set-floating --centered"]
+    match:
+      # All except main window
       - window_process: { equals: "BCUninstaller" }
+        window_title: { not_regex: "^Bulk Crap Uninstaller" }
 
 binding_modes:
   - name: "resize"
