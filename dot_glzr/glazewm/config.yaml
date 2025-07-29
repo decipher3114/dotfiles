@@ -73,6 +73,10 @@ workspaces:
 window_rules:
   - commands: ["ignore"]
     match:
+      # Invisible window
+      - window_process: { equals: "explorer" }
+        window_title: { equals: "Program Manager" }
+
       # PIP windows
       - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
         window_class: { regex: "Chrome_WidgetWin_1|MozillaDialogClass" }
@@ -92,15 +96,15 @@ window_rules:
       # GHelper ASUS
       - window_process: { equals: "GHelper" }
 
-      # All except the main window
-      - window_process: { equals: "ABDownloadManager" }
-        window_title: { not_equals: "AB Download Manager" }
-
   - commands: ["set-floating --centered"]
     match:
       # All except main window
       - window_process: { equals: "BCUninstaller" }
         window_title: { not_regex: "^Bulk Crap Uninstaller" }
+
+      # All except the main window
+      - window_process: { equals: "ABDownloadManager" }
+        window_title: { not_equals: "AB Download Manager" }
 
 binding_modes:
   - name: "resize"
