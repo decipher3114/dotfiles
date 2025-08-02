@@ -1,6 +1,4 @@
 {
-    "$schema": "https://aka.ms/winget-settings.schema.json",
-
     "uninstallBehavior": {
         "purgePortablePackage": true
     },
