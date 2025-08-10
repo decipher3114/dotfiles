@@ -64,7 +64,7 @@
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
-                "guid": "{0c096cf8-7a4a-58fe-bbeb-fe254c9f7382}",
+                "guid": "{a58637fb-d170-511d-94f8-aa97c879b09a}",
                 "hidden": false,
                 "name": "archlinux",
                 "source": "Microsoft.WSL"
