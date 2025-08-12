@@ -35,13 +35,14 @@
         "defaults": {
             "adjustIndistinguishableColors": "indexed",
             "colorScheme": {
-                "dark": "Catppuccin Mocha",
-                "light": "Catppuccin Latte"
+                "dark": "Everforest Dark",
+                "light": "Everforest Light"
             },
             "font": {
                 "cellHeight": "1.4",
-                "face": "CartographCF Nerd Font",
-                "size": 10
+                "face": "DMMono Nerd Font",
+                "size": 10,
+                "weight": "medium"
             },
             "opacity": 0
         },
