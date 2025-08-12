@@ -1,0 +1,105 @@
+{
+  "MaxResult": 50,
+  "QuickAccessLinks": [],
+  "IndexSearchExcludedSubdirectoryPaths": [
+    {
+      "Path": "D:\\",
+      "Type": 1
+    },
+    {
+      "Path": "C:\\Program Files",
+      "Type": 1
+    },
+    {
+      "Path": "C:\\Program Files (x86)",
+      "Type": 1
+    },
+    {
+      "Path": "C:\\ProgramData",
+      "Type": 1
+    },
+    {
+      "Path": "C:\\Windows",
+      "Type": 1
+    },
+    {
+      "Path": "C:\\Users\\Public",
+      "Type": 1
+    },
+    {
+      "Path": "C:\\Users\\Default",
+      "Type": 1
+    },
+    {
+      "Path": "C:\\Users\\decipher\\AppData",
+      "Type": 1
+    },
+    {
+      "Path": "C:\\Users\\decipher\\.vscode",
+      "Type": 1
+    },
+    {
+      "Path": "C:\\Users\\decipher\\.local",
+      "Type": 1
+    },
+    {
+      "Path": "C:\\Users\\decipher\\.config",
+      "Type": 1
+    },
+    {
+      "Path": "C:\\Users\\decipher\\.breeze-shell",
+      "Type": 1
+    },
+    {
+      "Path": "C:\\Users\\decipher\\.cache",
+      "Type": 1
+    },
+    {
+      "Path": "C:\\Users\\decipher\\.abdm",
+      "Type": 1
+    },
+    {
+      "Path": "C:\\Users\\decipher\\.android",
+      "Type": 1
+    },
+    {
+      "Path": "C:\\Windows.old",
+      "Type": 1
+    }
+  ],
+  "EditorPath": "",
+  "FolderEditorPath": "",
+  "ShellPath": "pwsh",
+  "ExcludedFileTypes": "",
+  "UseLocationAsWorkingDir": true,
+  "ShowInlinedWindowsContextMenu": false,
+  "WindowsContextMenuIncludedItems": "",
+  "WindowsContextMenuExcludedItems": "",
+  "DefaultOpenFolderInFileManager": true,
+  "SearchActionKeyword": "*",
+  "SearchActionKeywordEnabled": true,
+  "FileContentSearchActionKeyword": "c",
+  "FileContentSearchKeywordEnabled": false,
+  "PathSearchActionKeyword": "p",
+  "PathSearchKeywordEnabled": false,
+  "IndexSearchActionKeyword": "*",
+  "IndexSearchKeywordEnabled": false,
+  "QuickAccessActionKeyword": "q",
+  "QuickAccessKeywordEnabled": false,
+  "WarnWindowsSearchServiceOff": true,
+  "ShowFileSizeInPreviewPanel": true,
+  "ShowCreatedDateInPreviewPanel": true,
+  "ShowModifiedDateInPreviewPanel": true,
+  "ShowFileAgeInPreviewPanel": false,
+  "PreviewPanelDateFormat": "yyyy-MM-dd",
+  "PreviewPanelTimeFormat": "HH:mm",
+  "IndexSearchEngine": 1,
+  "PathEnumerationEngine": 1,
+  "ContentSearchEngine": 1,
+  "EverythingInstalledPath": "C:\\Program Files\\Everything 1.5a\\Everything.exe",
+  "SortOption": 1,
+  "EnableEverythingContentSearch": false,
+  "EverythingEnabled": true,
+  "EverythingSearchFullPath": false,
+  "EverythingEnableRunCount": true
+}

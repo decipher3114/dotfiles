@@ -1,4 +1,13 @@
 {
+    "installBehavior": {
+        "disableInstallNotes": true,
+        "portablePackageUserRoot": "C:/Users/decipher/Apps",
+        "preferences": {
+            "locale": [
+                "en-US"
+            ]
+        }
+    },
     "uninstallBehavior": {
         "purgePortablePackage": true
     },
@@ -8,8 +17,12 @@
     "telemetry": {
         "disable": true
     },
+    "visual": {
+        "anonymizeDisplayedPaths": true
+    },
     "experimentalFeatures": {
+        "configureSelfElevate": true,
         "directMSI": true,
-        "configureSelfElevate": true
+        "fonts": true
     }
 }

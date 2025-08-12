@@ -8,7 +8,8 @@
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
     "initialCols": 120,
     "initialRows": 35,
-    "keybindings": [
+    "keybindings": 
+    [
         {
             "id": "Terminal.CopyToClipboard",
             "keys": "ctrl+c"
@@ -26,19 +27,24 @@
             "keys": "alt+shift+d"
         }
     ],
-    "newTabMenu": [
+    "newTabMenu": 
+    [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": {
-        "defaults": {
+    "profiles": 
+    {
+        "defaults": 
+        {
             "adjustIndistinguishableColors": "indexed",
-            "colorScheme": {
+            "colorScheme": 
+            {
                 "dark": "Everforest Dark",
                 "light": "Everforest Light"
             },
-            "font": {
+            "font": 
+            {
                 "cellHeight": "1.4",
                 "face": "DMMono Nerd Font",
                 "size": 10,
@@ -46,7 +52,8 @@
             },
             "opacity": 0
         },
-        "list": [
+        "list": 
+        [
             {
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
@@ -72,7 +79,8 @@
             }
         ]
     },
-    "schemes": [
+    "schemes": 
+    [
         {
             "background": "#303446",
             "black": "#51576D",
@@ -258,24 +266,29 @@
             "yellow": "#8F5815"
         }
     ],
-    "theme": {
+    "theme": 
+    {
         "dark": "Mica Dark",
         "light": "Mica Light"
     },
-    "themes": [
+    "themes": 
+    [
         {
             "name": "Mica Dark",
-            "tab": {
+            "tab": 
+            {
                 "background": "#20202000",
                 "iconStyle": "default",
                 "showCloseButton": "always",
                 "unfocusedBackground": "#20202000"
             },
-            "tabRow": {
+            "tabRow": 
+            {
                 "background": "#20202000",
                 "unfocusedBackground": "#20202000"
             },
-            "window": {
+            "window": 
+            {
                 "applicationTheme": "dark",
                 "experimental.rainbowFrame": false,
                 "frame": null,
@@ -285,17 +298,20 @@
         },
         {
             "name": "Mica Light",
-            "tab": {
+            "tab": 
+            {
                 "background": "#F3F3F301",
                 "iconStyle": "default",
                 "showCloseButton": "always",
                 "unfocusedBackground": "#F3F3F301"
             },
-            "tabRow": {
+            "tabRow": 
+            {
                 "background": "#F3F3F301",
                 "unfocusedBackground": "#F3F3F301"
             },
-            "window": {
+            "window": 
+            {
                 "applicationTheme": "light",
                 "experimental.rainbowFrame": false,
                 "frame": null,
