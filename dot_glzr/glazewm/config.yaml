@@ -90,6 +90,9 @@ window_rules:
       # GUIPropView
       - window_process: { equals: "GUIPropView" }
 
+      # Winspy
+      - window_process: { regex: "winspy" }
+
       # Capter
       - window_process: { equals: "capter" }
 
