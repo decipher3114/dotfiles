@@ -13,7 +13,6 @@ control_brace_style = "AlwaysSameLine"
 disable_all_formatting = false
 doc_comment_code_block_width = 100
 edition = "2024"
-emit_mode = "Files"
 empty_item_single_line = true
 enum_discrim_align_threshold = 0
 error_on_line_overflow = false
@@ -77,3 +76,4 @@ use_small_heuristics = "Default"
 use_try_shorthand = false
 where_single_line = false
 wrap_comments = false
+
