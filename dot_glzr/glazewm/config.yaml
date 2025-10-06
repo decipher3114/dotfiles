@@ -109,6 +109,9 @@ window_rules:
       - window_process: { equals: "ABDownloadManager" }
         window_title: { not_equals: "AB Download Manager" }
 
+      # Visum Photo Viewer
+      - window_title: { regex: "Visum Photo Viewer$" }
+
 binding_modes:
   - name: "resize"
     keybindings:
