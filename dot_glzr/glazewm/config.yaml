@@ -7,7 +7,6 @@ general:
 
   cursor_jump:
     enabled: true
-
     trigger: "monitor_focus"
 
   hide_method: "cloak"
@@ -99,40 +98,30 @@ window_rules:
       # GHelper ASUS
       - window_process: { equals: "GHelper" }
 
+      # All except the main window
+      - window_process: { equals: "ABDownloadManager" }
+        window_title: { not_equals: "AB Download Manager" }
+
   - commands: ["set-floating --centered"]
     match:
       # All except main window
       - window_process: { equals: "BCUninstaller" }
         window_title: { not_regex: "^Bulk Crap Uninstaller" }
 
-      # All except the main window
-      - window_process: { equals: "ABDownloadManager" }
-        window_title: { not_equals: "AB Download Manager" }
-
       # Visum Photo Viewer
       - window_title: { regex: "Visum Photo Viewer$" }
 
+      # FlyGallery
+      - window_process: { equals: "FlyGallery" }
+
 binding_modes:
-  - name: "resize"
-    keybindings:
-      - commands: ["resize --width -2%"]
-        bindings: ["h", "left"]
-      - commands: ["resize --width +2%"]
-        bindings: ["l", "right"]
-      - commands: ["resize --height +2%"]
-        bindings: ["k", "up"]
-      - commands: ["resize --height -2%"]
-        bindings: ["j", "down"]
-
-      - commands: ["wm-disable-binding-mode --name resize"]
-        bindings: ["escape", "enter"]
-
   - name: "pause"
     keybindings:
       - commands: ["wm-disable-binding-mode --name pause"]
         bindings: ["alt+shift+p"]
 
 keybindings:
+  # Window focus
   - commands: ["focus --direction left"]
     bindings: ["alt+h", "alt+left"]
   - commands: ["focus --direction right"]
@@ -142,6 +131,7 @@ keybindings:
   - commands: ["focus --direction down"]
     bindings: ["alt+j", "alt+down"]
 
+  # Window move
   - commands: ["move --direction left"]
     bindings: ["alt+shift+h", "alt+shift+left"]
   - commands: ["move --direction right"]
@@ -151,30 +141,26 @@ keybindings:
   - commands: ["move --direction down"]
     bindings: ["alt+shift+j", "alt+shift+down"]
 
+  # Window resize
   - commands: ["resize --width -2%"]
-    bindings: ["alt+u"]
+    bindings: ["alt+u", "alt+oem_minus"]
   - commands: ["resize --width +2%"]
-    bindings: ["alt+p"]
-  - commands: ["resize --height +2%"]
-    bindings: ["alt+o"]
+    bindings: ["alt+p", "alt+oem_plus"]
   - commands: ["resize --height -2%"]
-    bindings: ["alt+i"]
-
-  - commands: ["wm-enable-binding-mode --name resize"]
-    bindings: ["alt+r"]
+    bindings: ["alt+i", "alt+shift+oem_minus"]
+  - commands: ["resize --height +2%"]
+    bindings: ["alt+o", "alt+shift+oem_plus"]
 
   - commands: ["wm-enable-binding-mode --name pause"]
     bindings: ["alt+shift+p"]
 
+  # Tiling and floating management
   - commands: ["toggle-tiling"]
     bindings: ["alt+t"]
-
   - commands: ["toggle-floating --centered"]
     bindings: ["alt+f"]
-
   - commands: ["toggle-tiling-direction"]
     bindings: ["alt+v"]
-
   - commands: ["close"]
     bindings: ["alt+q"]
 
@@ -184,15 +170,7 @@ keybindings:
   - commands: ["wm-redraw"]
     bindings: ["alt+shift+w"]
 
-  - commands: ["focus --next-workspace"]
-    bindings: ["alt+control+right"]
-
-  - commands: ["focus --prev-workspace"]
-    bindings: ["alt+control+left"]
-
-  - commands: ["focus --recent-workspace"]
-    bindings: ["alt+d"]
-
+  # Workspace management
   - commands: ["focus --workspace 1"]
     bindings: ["alt+1", "alt+numpad1"]
   - commands: ["focus --workspace 2"]
@@ -211,16 +189,14 @@ keybindings:
     bindings: ["alt+8", "alt+numpad8"]
   - commands: ["focus --workspace 9"]
     bindings: ["alt+9", "alt+numpad9"]
+  - commands: ["focus --next-workspace"]
+    bindings: ["alt+control+right"]
+  - commands: ["focus --prev-workspace"]
+    bindings: ["alt+control+left"]
+  - commands: ["focus --recent-workspace"]
+    bindings: ["alt+d"]
 
-  - commands: ["move-workspace --direction left"]
-    bindings: ["alt+ctrl+shift+left"]
-  - commands: ["move-workspace --direction right"]
-    bindings: ["alt+ctrl+shift+right"]
-  - commands: ["move-workspace --direction up"]
-    bindings: ["alt+ctrl+shift+up"]
-  - commands: ["move-workspace --direction down"]
-    bindings: ["alt+ctrl+shift+down"]
-
+  # Move focused window to workspace and switch to it
   - commands: ["move --workspace 1", "focus --workspace 1"]
     bindings: ["alt+shift+1"]
   - commands: ["move --workspace 2", "focus --workspace 2"]
@@ -239,3 +215,13 @@ keybindings:
     bindings: ["alt+shift+8"]
   - commands: ["move --workspace 9", "focus --workspace 9"]
     bindings: ["alt+shift+9"]
+
+  # Move workspace to adjacent monitor
+  - commands: ["move-workspace --direction left"]
+    bindings: ["alt+ctrl+shift+left"]
+  - commands: ["move-workspace --direction right"]
+    bindings: ["alt+ctrl+shift+right"]
+  - commands: ["move-workspace --direction up"]
+    bindings: ["alt+ctrl+shift+up"]
+  - commands: ["move-workspace --direction down"]
+    bindings: ["alt+ctrl+shift+down"]
