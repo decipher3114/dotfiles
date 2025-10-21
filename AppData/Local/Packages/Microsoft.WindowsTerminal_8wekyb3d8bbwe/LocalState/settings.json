@@ -8,52 +8,45 @@
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
     "initialCols": 120,
     "initialRows": 35,
-    "keybindings": 
-    [
+    "keybindings": [
         {
             "id": "Terminal.CopyToClipboard",
             "keys": "ctrl+c"
-        },
-        {
-            "id": "Terminal.FindText",
-            "keys": "ctrl+shift+f"
         },
         {
             "id": "Terminal.PasteFromClipboard",
             "keys": "ctrl+v"
         },
         {
+            "id": "Terminal.FindText",
+            "keys": "ctrl+shift+f"
+        },
+        {
             "id": "Terminal.DuplicatePaneAuto",
             "keys": "alt+shift+d"
         }
     ],
-    "newTabMenu": 
-    [
+    "newTabMenu": [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": 
-    {
-        "defaults": 
-        {
+    "profiles": {
+        "defaults": {
             "adjustIndistinguishableColors": "indexed",
-            "colorScheme": 
-            {
+            "colorScheme": {
                 "dark": "Everforest Dark",
                 "light": "Everforest Light"
             },
-            "font": 
-            {
+            "font": {
                 "cellHeight": "1.4",
-                "face": "DMMono Nerd Font",
+                "face": "Google Sans Code NF",
                 "size": 10,
                 "weight": "medium"
             },
             "opacity": 0
         },
-        "list": 
-        [
+        "list": [
             {
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
@@ -72,15 +65,14 @@
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
-                "guid": "{a58637fb-d170-511d-94f8-aa97c879b09a}",
+                "guid": "{979bac6d-3ea4-51a2-aa3a-d6b074772f2d}",
                 "hidden": false,
                 "name": "archlinux",
                 "source": "Microsoft.WSL"
             }
         ]
     },
-    "schemes": 
-    [
+    "schemes": [
         {
             "background": "#303446",
             "black": "#51576D",
@@ -266,29 +258,24 @@
             "yellow": "#8F5815"
         }
     ],
-    "theme": 
-    {
+    "theme": {
         "dark": "Mica Dark",
         "light": "Mica Light"
     },
-    "themes": 
-    [
+    "themes": [
         {
             "name": "Mica Dark",
-            "tab": 
-            {
+            "tab": {
                 "background": "#20202000",
                 "iconStyle": "default",
                 "showCloseButton": "always",
                 "unfocusedBackground": "#20202000"
             },
-            "tabRow": 
-            {
+            "tabRow": {
                 "background": "#20202000",
                 "unfocusedBackground": "#20202000"
             },
-            "window": 
-            {
+            "window": {
                 "applicationTheme": "dark",
                 "experimental.rainbowFrame": false,
                 "frame": null,
@@ -298,20 +285,17 @@
         },
         {
             "name": "Mica Light",
-            "tab": 
-            {
+            "tab": {
                 "background": "#F3F3F301",
                 "iconStyle": "default",
                 "showCloseButton": "always",
                 "unfocusedBackground": "#F3F3F301"
             },
-            "tabRow": 
-            {
+            "tabRow": {
                 "background": "#F3F3F301",
                 "unfocusedBackground": "#F3F3F301"
             },
-            "window": 
-            {
+            "window": {
                 "applicationTheme": "light",
                 "experimental.rainbowFrame": false,
                 "frame": null,
