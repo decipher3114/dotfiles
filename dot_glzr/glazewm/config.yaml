@@ -112,7 +112,7 @@ window_rules:
       - window_title: { regex: "Visum Photo Viewer$" }
 
       # FlyGallery
-      - window_process: { equals: "FlyGallery" }
+      - window_title: { equals: "FlyGallery" }
 
 binding_modes:
   - name: "pause"

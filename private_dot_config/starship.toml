@@ -30,108 +30,108 @@ scan_timeout = 30
 
 [hostname]
 detect_env_vars = []
-disabled        = false
-format          = "[$ssh_symbol$hostname]($style) in "
-ssh_only        = true
-ssh_symbol      = " "
-style           = "green dimmed bold"
-trim_at         = "."
+disabled = false
+format = "[$ssh_symbol$hostname]($style) in "
+ssh_only = true
+ssh_symbol = " "
+style = "green dimmed bold"
+trim_at = "."
 
 [directory]
-disabled                  = false
+disabled = false
 fish_style_pwd_dir_length = 0
-format                    = "[$path]($style)[$read_only]($read_only_style) "
-home_symbol               = "~"
-read_only                 = "󰌾 "
-read_only_style           = "red"
-repo_root_format          = "[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
-style                     = "cyan bold"
-truncate_to_repo          = true
-truncation_length         = 10
-truncation_symbol         = "../"
-use_logical_path          = true
-use_os_path_sep           = true
+format = "[$path]($style)[$read_only]($read_only_style) "
+home_symbol = "~"
+read_only = "󰌾 "
+read_only_style = "red"
+repo_root_format = "[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
+style = "cyan bold"
+truncate_to_repo = true
+truncation_length = 10
+truncation_symbol = "../"
+use_logical_path = true
+use_os_path_sep = true
 
 [git_branch]
 always_show_remote = false
-disabled           = false
-format             = "[on](italic dimmed) [$symbol$branch(:$remote_branch)]($style) "
-ignore_branches    = []
-only_attached      = false
-style              = "bold purple"
-symbol             = " "
-truncation_length  = 9223372036854775807
-truncation_symbol  = "…"
+disabled = false
+format = "[on](italic dimmed) [$symbol$branch(:$remote_branch)]($style) "
+ignore_branches = []
+only_attached = false
+style = "bold purple"
+symbol = " "
+truncation_length = 9223372036854775807
+truncation_symbol = "…"
 
 [git_commit]
 commit_hash_length = 7
-disabled           = false
-format             = '[\($hash$tag\)]($style) '
-only_detached      = true
-style              = "green bold"
-tag_disabled       = true
+disabled = false
+format = '[\($hash$tag\)]($style) '
+only_detached = true
+style = "green bold"
+tag_disabled = true
 tag_max_candidates = 0
-tag_symbol         = " 🏷  "
+tag_symbol = " 🏷  "
 
 [git_metrics]
-added_style        = "bold green"
-deleted_style      = "bold red"
-disabled           = true
-format             = "([+$added]($added_style) )([-$deleted]($deleted_style) )"
-ignore_submodules  = false
+added_style = "bold green"
+deleted_style = "bold red"
+disabled = true
+format = "([+$added]($added_style) )([-$deleted]($deleted_style) )"
+ignore_submodules = false
 only_nonzero_diffs = true
 
 [git_state]
-am           = "AM"
+am = "AM"
 am_or_rebase = "AM/REBASE"
-bisect       = "BISECTING"
-cherry_pick  = "CHERRY-PICKING"
-disabled     = false
-format       = '\([$state( $progress_current/$progress_total)]($style)\) '
-merge        = "MERGING"
-rebase       = "REBASING"
-revert       = "REVERTING"
-style        = "bold yellow"
+bisect = "BISECTING"
+cherry_pick = "CHERRY-PICKING"
+disabled = false
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+merge = "MERGING"
+rebase = "REBASING"
+revert = "REVERTING"
+style = "bold yellow"
 
 [git_status]
-ahead             = "⇡"
-behind            = "⇣"
-conflicted        = "="
-deleted           = "✘"
-disabled          = false
-diverged          = "⇕"
-format            = '([\[$all_status$ahead_behind\]]($style) )'
+ahead = "⇡"
+behind = "⇣"
+conflicted = "="
+deleted = "✘"
+disabled = false
+diverged = "⇕"
+format = '([\[$all_status$ahead_behind\]]($style) )'
 ignore_submodules = false
-modified          = "!"
-renamed           = "»"
-staged            = "+"
-stashed           = '\$'
-style             = "red bold"
-typechanged       = ""
-untracked         = "?"
-up_to_date        = ""
+modified = "!"
+renamed = "»"
+staged = "+"
+stashed = '\$'
+style = "red bold"
+typechanged = ""
+untracked = "?"
+up_to_date = ""
 
 [c]
-commands          = [["--version", "cc"], ["--version", "clang"], ["--version", "gcc"]]
+commands = [["--version", "cc"], ["--version", "clang"], ["--version", "gcc"]]
 detect_extensions = ["c", "h"]
-detect_files      = []
-detect_folders    = []
-disabled          = false
-format            = "[via](italic dimmed) [$symbol($version(-$name) )]($style)"
-style             = "149 bold"
-symbol            = "C "
-version_format    = "v${raw}"
+detect_files = []
+detect_folders = []
+disabled = false
+format = "[via](italic dimmed) [$symbol($version(-$name) )]($style)"
+style = "149 bold"
+symbol = "C "
+version_format = "v${raw}"
 
 [python]
 detect_extensions = ["py"]
 detect_files = [
-    ".python-version",
-    "Pipfile",
-    "__init__.py",
-    "pyproject.toml",
-    "requirements.txt",
-    "setup.py",
-    "tox.ini",
+  ".python-version",
+  "Pipfile",
+  "__init__.py",
+  "pyproject.toml",
+  "requirements.txt",
+  "setup.py",
+  "tox.ini",
 ]
 detect_folders = []
 disabled = false
@@ -145,78 +145,78 @@ version_format = "v${raw}"
 
 [rust]
 detect_extensions = ["rs"]
-detect_files      = ["Cargo.toml"]
-detect_folders    = []
-disabled          = false
-format            = "[via](italic dimmed) [$symbol($version )]($style)"
-style             = "bold red"
-symbol            = "󱘗 "
-version_format    = "v${raw}"
+detect_files = ["Cargo.toml"]
+detect_folders = []
+disabled = false
+format = "[via](italic dimmed) [$symbol($version )]($style)"
+style = "bold red"
+symbol = "󱘗 "
+version_format = "v${raw}"
 
 [package]
-disabled        = false
+disabled = false
 display_private = false
-format          = "[is](italic dimmed) [$symbol$version]($style) "
-style           = "208 bold"
-symbol          = " "
-version_format  = "v${raw}"
+format = "[is](italic dimmed) [$symbol$version]($style) "
+style = "208 bold"
+symbol = " "
+version_format = "v${raw}"
 
 [fill]
 disabled = false
-style    = ""
-symbol   = " "
+style = ""
+symbol = " "
 
 [cmd_duration]
-disabled           = false
-format             = "[took](italic dimmed) [$duration]($style)"
-min_time           = 500
+disabled = false
+format = "[took](italic dimmed) [$duration]($style)"
+min_time = 500
 min_time_to_notify = 10
-show_milliseconds  = false
+show_milliseconds = false
 show_notifications = false
-style              = "yellow bold"
+style = "yellow bold"
 
 [time]
-disabled        = false
-format          = "[at](italic dimmed) [$time]($style)"
-style           = "bold yellow"
-time_range      = "-"
-use_12hr        = false
+disabled = false
+format = "[at](italic dimmed) [$time]($style)"
+style = "bold yellow"
+time_range = "-"
+use_12hr = false
 utc_time_offset = "local"
 
 [line_break]
 disabled = false
 
 [jobs]
-disabled         = false
-format           = "[$symbol $number]($style) "
+disabled = false
+format = "[$symbol $number]($style) "
 number_threshold = 2
-style            = "bold blue"
-symbol           = "✦"
+style = "bold blue"
+symbol = "✦"
 symbol_threshold = 1
-threshold        = 1
+threshold = 1
 
 [status]
-disabled              = false
-format                = "[$symbol $status]($style) "
-map_symbol            = false
+disabled = false
+format = "[$symbol $status]($style) "
+map_symbol = false
 not_executable_symbol = ""
-not_found_symbol      = ""
-pipestatus            = false
-pipestatus_format     = '\[$pipestatus\] => [$symbol$common_meaning$signal_name$maybe_int]($style)'
-pipestatus_separator  = "|"
+not_found_symbol = ""
+pipestatus = false
+pipestatus_format = '\[$pipestatus\] => [$symbol$common_meaning$signal_name$maybe_int]($style)'
+pipestatus_separator = "|"
 recognize_signal_code = true
-sigint_symbol         = ""
-signal_symbol         = "⚡"
-style                 = "bold red"
-success_symbol        = ""
-symbol                = ""
+sigint_symbol = ""
+signal_symbol = "⚡"
+style = "bold red"
+success_symbol = ""
+symbol = ""
 
 [character]
-disabled                  = false
-error_symbol              = "[❯](bold red)"
-format                    = "$symbol "
-success_symbol            = "[❯](bold green)"
+disabled = false
+error_symbol = "[❯](bold red)"
+format = "$symbol "
+success_symbol = "[❯](bold green)"
 vimcmd_replace_one_symbol = "[❮](bold purple)"
-vimcmd_replace_symbol     = "[❮](bold purple)"
-vimcmd_symbol             = "[❮](bold green)"
-vimcmd_visual_symbol      = "[❮](bold yellow)"
+vimcmd_replace_symbol = "[❮](bold purple)"
+vimcmd_symbol = "[❮](bold green)"
+vimcmd_visual_symbol = "[❮](bold yellow)"
