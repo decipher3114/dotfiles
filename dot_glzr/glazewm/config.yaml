@@ -102,11 +102,15 @@ window_rules:
       - window_process: { equals: "ABDownloadManager" }
         window_title: { not_equals: "AB Download Manager" }
 
-  - commands: ["set-floating --centered"]
+  - commands: ["set-floating --centered --shown-on-top"]
     match:
       # All except main window
       - window_process: { equals: "BCUninstaller" }
         window_title: { not_regex: "^Bulk Crap Uninstaller" }
+
+      # All except main window
+      - window_process: { equals: "qbittorrent" }
+        window_title: { not_regex: "^qBittorrent" }
 
       # Visum Photo Viewer
       - window_title: { regex: "Visum Photo Viewer$" }
@@ -123,33 +127,33 @@ binding_modes:
 keybindings:
   # Window focus
   - commands: ["focus --direction left"]
-    bindings: ["alt+h", "alt+left"]
+    bindings: ["alt+left"]
   - commands: ["focus --direction right"]
-    bindings: ["alt+l", "alt+right"]
+    bindings: ["alt+right"]
   - commands: ["focus --direction up"]
-    bindings: ["alt+k", "alt+up"]
+    bindings: ["alt+up"]
   - commands: ["focus --direction down"]
-    bindings: ["alt+j", "alt+down"]
+    bindings: ["alt+down"]
 
   # Window move
   - commands: ["move --direction left"]
-    bindings: ["alt+shift+h", "alt+shift+left"]
+    bindings: ["alt+shift+left"]
   - commands: ["move --direction right"]
-    bindings: ["alt+shift+l", "alt+shift+right"]
+    bindings: ["alt+shift+right"]
   - commands: ["move --direction up"]
-    bindings: ["alt+shift+k", "alt+shift+up"]
+    bindings: ["alt+shift+up"]
   - commands: ["move --direction down"]
-    bindings: ["alt+shift+j", "alt+shift+down"]
+    bindings: ["alt+shift+down"]
 
   # Window resize
   - commands: ["resize --width -2%"]
-    bindings: ["alt+u", "alt+oem_minus"]
+    bindings: ["alt+oem_minus"]
   - commands: ["resize --width +2%"]
-    bindings: ["alt+p", "alt+oem_plus"]
+    bindings: ["alt+oem_plus"]
   - commands: ["resize --height -2%"]
-    bindings: ["alt+i", "alt+shift+oem_minus"]
+    bindings: ["alt+shift+oem_minus"]
   - commands: ["resize --height +2%"]
-    bindings: ["alt+o", "alt+shift+oem_plus"]
+    bindings: ["alt+shift+oem_plus"]
 
   - commands: ["wm-enable-binding-mode --name pause"]
     bindings: ["alt+shift+p"]
